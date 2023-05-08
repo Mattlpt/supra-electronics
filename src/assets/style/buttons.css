@@ -1,0 +1,12 @@
+@import "couleur.css";
+
+button{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+    padding: 14px 22px;
+    border: none;
+    background: var(--primary-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
