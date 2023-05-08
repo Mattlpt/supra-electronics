@@ -32,13 +32,14 @@ include($page_include);
         modeText = body.querySelector(".mode-text");
 
 
-    toggle.addEventListener("click" , () =>{
+    toggle.addEventListener("click" , () => {
         sidebar.classList.toggle("close");
     })
 
     searchBtn.addEventListener("click" , () =>{
         sidebar.classList.remove("close");
     })
+
 
     modeSwitch.addEventListener("click" , () =>{
         body.classList.toggle("dark");
@@ -50,7 +51,7 @@ include($page_include);
             modeText.innerText = "Dark mode";
             localStorage.setItem('theme', "light");
         }
-    });
+    })
 
     if(localStorage.getItem('theme') === "dark"){
         body.classList.add("dark");
