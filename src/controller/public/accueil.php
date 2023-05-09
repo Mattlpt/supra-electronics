@@ -1,4 +1,4 @@
 <?php
 
 
-renderView('public/accueil.view.php', NULL, "Supra Electronics");
+renderPublicView('public/accueil.view.php', NULL, "Supra Electronics");
