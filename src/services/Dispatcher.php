@@ -50,6 +50,9 @@ class Dispatcher
                 case'accueil':
                     include('controller/public/accueil.php');
                     break;
+                case'CGU':
+                    include('controller/public/CGU.php');
+                    break;
 
                 default:
                     include('controller/home/index.php');
