@@ -380,3 +380,12 @@ body.dark .home .text{
     background-color: var(--primary-color);
     color: white;
 }
+
+/* ===== CGU ===== */
+
+.content-body cgu{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-color);
+    padding: 8px;
+}
