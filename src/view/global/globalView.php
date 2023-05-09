@@ -5,7 +5,7 @@
     <title><?php echo $page_title; ?> - Supratronics</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="/style/menu-display.css" rel="stylesheet">
+    <link href="/style/menu.css" rel="stylesheet">
     <link href="/style/notification.css" rel="stylesheet">
     <link href="/style/WarningPopUp.css" rel="stylesheet">
 </head>
