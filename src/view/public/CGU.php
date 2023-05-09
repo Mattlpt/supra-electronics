@@ -1,21 +1,15 @@
-<section>
-    <div class="title">
-        <h1>Mentions Légales et CGU</h1>
-    </div>
-    <div class="body">
-        <h2>Mentions Légales </h2>
+<section class="home">
+
+    <div class="title-text">Mansion Légale</div>
+    <div class="content-body">
+
         <p>
-            <br>
-            <br>
-            <br>
-            <br>
+
             <br>Ce site est édité par la société  Supra Electronic.
-            <br>
-            <br>
+
             <br>Siège social : Supra Electronic Paris
             <br>Téléphone : +33 (0)4.74.00.00.00
-            <br>
-            <br>
+
             <br> Informatique et liberté
             <br>
             <br>
@@ -135,7 +129,12 @@
         <br>        Pour toute question relative aux présentes conditions d’utilisation du site, vous pouvez nous écrire à l’adresse suivante :
         <br>
         </p>
-        <IMG SRC="" >
+
+    </div>
+
+    <div class="cgu">
+
+
     </div>
 
 </section>

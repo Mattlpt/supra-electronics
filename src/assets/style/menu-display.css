@@ -339,7 +339,10 @@ body.dark .home .text{
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);
+    overflow: scroll;
 }
+
+
 
 .home .title-text{
     font-size: 30px;
@@ -352,6 +355,11 @@ body.dark .home .text{
 .content-body{
     margin: 1em;
     margin-left: 2em;
+    overflow: scroll;
+}
+
+.content-body::-webkit-scrollbar{
+    display: none;
 }
 
 
