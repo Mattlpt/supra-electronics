@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Bar with Search Box</title>
     <!-- CSS -->
-    <link href="/style/menu-display.css" rel="stylesheet">
     <!-- Unicons CSS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <script src="Style/JS/accueil.js" defer></script>
@@ -52,15 +51,14 @@
 
     <span class="button">
         <i class="uil uil-search search-icon" id="searchIcon"></i>
-        <a class="animated-link-signup" onclick="window.location.href='/index.php?cible=maincontroleur&fonction=register'">
+        <a class="animated-link-signup" onclick="window.location.href = '/'">
                 <span>Inscription</span>
         </a>
 
-        <a class="animated-link-login" onclick="window.location.href = '/index.php?cible=maincontroleur&fonction=login'">
+        <a class="animated-link-login" onclick="window.location.href = '/'">
                 <span>Connexion</span>
         </a>
-
-      </span>
+    </span>
 </div>
 <div class="page">
     <p class="intro-title-text">Votre Santé au Travail</p>

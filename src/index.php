@@ -20,6 +20,7 @@ function renderView($name, $vars = [], $title = 'Supraelectronics'): void
    // echo $name;
     if(file_exists('view/'.$name))
     {
+
         $page_include = 'view/'.$name;
         $page_title = $title;
         include('view/global/globalView.php');
@@ -27,6 +28,20 @@ function renderView($name, $vars = [], $title = 'Supraelectronics'): void
         echo "TEMPLATE INTROUVABLE";
        // header('HTTP/1.0 404 Not Found');
        // die;
+    }
+}
+
+function renderPublicView($name, $vars = [], $title = 'Supraelectronics') : void
+{
+    if(file_exists('view/'.$name))
+    {
+        $page_include = 'view/'.$name;
+        $page_title = $title;
+        include('view/public/globalView.php');
+    }else {
+        echo "TEMPLATE INTROUVABLE";
+        // header('HTTP/1.0 404 Not Found');
+        // die
     }
 }
 

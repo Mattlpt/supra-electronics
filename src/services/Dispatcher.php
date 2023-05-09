@@ -47,7 +47,7 @@ class Dispatcher
                     include('controller/user/index.php');
                     break;
 
-                case'accueil':
+                case'supraelectronic':
                     include('controller/public/accueil.php');
                     break;
 
