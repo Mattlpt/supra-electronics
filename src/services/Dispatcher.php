@@ -2,6 +2,9 @@
 
 namespace services;
 
+use Analytics;
+use controller\public\Accueil;
+
 class Dispatcher
 {
     private ?string $page = null;
@@ -37,6 +40,7 @@ class Dispatcher
                 case 'analytics':
 
                     include('controller/analyse/analytics.php');
+                    Analytics::renderView();
                     break;
 
                 case 'messagerie':
@@ -49,6 +53,7 @@ class Dispatcher
 
                 case'supraelectronic':
                     include('controller/public/accueil.php');
+                    Accueil::renderView();
                     break;
 
                 default:
