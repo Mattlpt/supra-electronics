@@ -9,7 +9,7 @@ class Accueil
 
     }
 
-    public static function renderView(): void
+    public static function renderMainView(): void
     {
         renderPublicView('public/accueil.view.php', NULL, "Supra Electronics");
     }

@@ -4,6 +4,8 @@ namespace services;
 
 use Analytics;
 use controller\public\Accueil;
+use Messagerie;
+use Stats;
 
 class Dispatcher
 {
@@ -34,17 +36,19 @@ class Dispatcher
                     break;
 
                 case 'stats':
-                    include('controller/analyse/stats.php');
+                    include('controller/analyse/Stats.php');
+                    Stats::renderMainView();
                     break;
 
                 case 'analytics':
 
-                    include('controller/analyse/analytics.php');
-                    Analytics::renderView();
+                    include('controller/analyse/Analytics.php');
+                    Analytics::renderMainView();
                     break;
 
                 case 'messagerie':
-                    include('controller/contact/messagerie.php');
+                    include('controller/contact/Messagerie.php');
+                    Messagerie::renderMainView();
                     break;
 
                 case 'user':
@@ -52,8 +56,8 @@ class Dispatcher
                     break;
 
                 case'supraelectronic':
-                    include('controller/public/accueil.php');
-                    Accueil::renderView();
+                    include('controller/public/Accueil.php');
+                    Accueil::renderMainView();
                     break;
 
                 default:

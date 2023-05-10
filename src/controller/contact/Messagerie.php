@@ -1,6 +1,6 @@
 <?php
 
-class Analytics{
+class Messagerie{
 
     public function __construct()
     {
@@ -8,6 +8,6 @@ class Analytics{
 
     public static function renderMainView():void
     {
-        renderView("analyse/analytics.view.php", NULL, "Analytics");
+        renderView("contact/messagerie.view.php", NULL, "messagerie");
     }
 }

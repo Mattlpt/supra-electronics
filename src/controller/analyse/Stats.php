@@ -1,13 +1,14 @@
 <?php
 
-class Analytics{
-
+class Stats
+{
     public function __construct()
     {
     }
 
     public static function renderMainView():void
     {
-        renderView("analyse/analytics.view.php", NULL, "Analytics");
+        renderView("analyse/stats.view.php", NULL, "Stats");
     }
 }
+
