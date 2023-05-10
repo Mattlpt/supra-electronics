@@ -51,6 +51,10 @@ class Dispatcher
                     include('controller/public/accueil.php');
                     break;
 
+                case 'register' :
+                    include('controller/security/register.php');
+                    break;
+
                 default:
                     include('controller/home/index.php');
             }

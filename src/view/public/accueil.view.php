@@ -1,16 +1,4 @@
-<!DOCTYPE html>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Bar with Search Box</title>
-    <!-- CSS -->
-    <!-- Unicons CSS -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <script src="Style/JS/accueil.js" defer></script>
-</head>
 <body>
 <div class="top-band">
     <h3 class="text">Nouveauté : le site est maintenant disponible en anglais. Essayer !</h3>
@@ -51,7 +39,7 @@
 
     <span class="button">
         <i class="uil uil-search search-icon" id="searchIcon"></i>
-        <a class="animated-link-signup" onclick="window.location.href = '/'">
+        <a class="animated-link-signup" onclick="window.location.href = '/register'">
                 <span>Inscription</span>
         </a>
 
