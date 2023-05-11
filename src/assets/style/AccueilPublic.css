@@ -682,3 +682,27 @@ a {
     margin: 100px auto;
 }
 
+/* ===== Section ===== */
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+main > section {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+main > section:nth-child(odd){
+
+}
+
+.vide{
+    height: 5%;
+    background: var(--body-color);
+}
