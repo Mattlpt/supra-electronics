@@ -6,6 +6,7 @@ use Analytics;
 use controller\public\Accueil;
 use Messagerie;
 use Stats;
+use controller\config\Configu;
 
 class Dispatcher
 {
@@ -32,7 +33,8 @@ class Dispatcher
                     break;
 
                 case 'config':
-                    include('controller/config/config.php');
+                    include('controller/config/Configu.php');
+                    Configu::initialize();
                     break;
 
                 case 'stats':
