@@ -299,7 +299,7 @@ a {
     width: 100%;
 }
 
-.page .intro-title-primary{
+.intro-title-primary{
     font-size: 60px;
     font-weight: 700;
     color: var(--primary-color);
@@ -307,7 +307,7 @@ a {
     justify-content: center;
 }
 
-.page .intro-title-text{
+.intro-title-text{
     font-size: 60px;
     font-weight: 700;
     color: var(--text-color);
@@ -316,7 +316,7 @@ a {
     margin-top: 10%;
 }
 
-.page .text-presentation{
+.text-presentation{
     font-size: 16px;
     font-weight: 300;
     color: var(--text-color);
@@ -328,15 +328,14 @@ a {
     text-align: center;
 }
 
-.page .title-black{
+.title-black{
     font-size: 40px;
     font-weight: 600;
     color: var(--black);
-    display: flex;
-    justify-content: center;
+
 }
 
-.page .title-primary{
+.title-primary{
     font-size: 40px;
     font-weight: 600;
     color: var(--primary-color);
@@ -344,7 +343,7 @@ a {
     justify-content: center;
 }
 
-.page .title-error{
+.title-error{
     font-size: 40px;
     font-weight: 600;
     color: var(--error-color);
@@ -352,7 +351,7 @@ a {
     justify-content: center;
 }
 
-.page .title-succes{
+.title-succes{
     font-size: 40px;
     font-weight: 600;
     color: var(--succes-color);
@@ -360,7 +359,7 @@ a {
     justify-content: center;
 }
 
-.page .title-warning{
+.title-warning{
     font-size: 40px;
     font-weight: 600;
     color: var(--warning-color);
@@ -368,7 +367,7 @@ a {
     justify-content: center;
 }
 
-.page .title-text{
+.title-text{
     font-size: 40px;
     font-weight: 600;
     color: var(--text-color);
@@ -376,7 +375,7 @@ a {
     justify-content: center;
 }
 
-.page .title-hard-text{
+.title-hard-text{
     font-size: 40px;
     font-weight: 600;
     color: var(--text-hard-color);
@@ -384,7 +383,7 @@ a {
     justify-content: center;
 }
 
-.page .sub-title-black{
+.sub-title-black{
     font-size: 30px;
     font-weight: 600;
     color: var(--black);
@@ -392,7 +391,7 @@ a {
     justify-content: center;
 }
 
-.page .sub-title-primary{
+.sub-title-primary{
     font-size: 30px;
     font-weight: 600;
     color: var(--primary-color);
@@ -400,7 +399,7 @@ a {
     justify-content: center;
 }
 
-.page .sub-title-error{
+.sub-title-error{
     font-size: 30px;
     font-weight: 600;
     color: var(--error-color);
@@ -408,7 +407,7 @@ a {
     justify-content: center;
 }
 
-.page .sub-title-succes{
+.sub-title-succes{
     font-size: 30px;
     font-weight: 600;
     color: var(--succes-color);
@@ -416,7 +415,7 @@ a {
     justify-content: center;
 }
 
-.page .sub-title-warning{
+.sub-title-warning{
     font-size: 30px;
     font-weight: 600;
     color: var(--warning-color);
@@ -424,7 +423,7 @@ a {
     justify-content: center;
 }
 
-.page .sub-title-text{
+.sub-title-text{
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color);
@@ -432,7 +431,7 @@ a {
     justify-content: center;
 }
 
-.page .sub-title-hard-text{
+.sub-title-hard-text{
     font-size: 30px;
     font-weight: 600;
     color: var(--text-hard-color);
@@ -440,16 +439,16 @@ a {
     justify-content: center;
 }
 
-.page .text-black{
+.text-black{
     font-size: 16px;
     font-weight: 400;
-    padding: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 0px;
     color: var(--black);
-    display: flex;
-    justify-content: center;
+    /*display: flex;
+    justify-content: center;*/
 }
 
-.page .text-primary{
+.text-primary{
     font-size: 16px;
     font-weight: 400;
     padding: 15px 15px 15px 15px;
@@ -458,7 +457,7 @@ a {
     justify-content: center;
 }
 
-.page .text-error{
+.text-error{
     font-size: 16px;
     font-weight: 400;
     padding: 15px 15px 15px 15px;
@@ -467,25 +466,17 @@ a {
     justify-content: center;
 }
 
-.page .text-hard-text{
+.text-hard-text{
     font-size: 16px;
     font-weight: 400;
-    padding: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 0px;
     color: var(--text-hard-color);
-    display: flex;
-    justify-content: center;
+    /*display: flex;
+    justify-content: center;*/
 }
 
-.page .text-hard-text{
-    font-size: 16px;
-    font-weight: 400;
-    padding: 15px 15px 15px 15px;
-    color: var(--text-hard-color);
-    display: flex;
-    justify-content: center;
-}
 
-.page .text-text{
+.text-text{
     font-size: 16px;
     font-weight: 400;
     padding: 15px 15px 15px 15px;
@@ -494,7 +485,7 @@ a {
     justify-content: center;
 }
 
-.page .text-light{
+.text-light{
     font-size: 16px;
     font-weight: 400;
     padding: 15px 15px 15px 15px;
@@ -670,5 +661,24 @@ a {
 .product {
     width: 12%;
     height: 12%;
+}
+
+/* ==== Grille ==== */
+
+.grille {
+    max-width: 1600px;
+    width: 95%;
+    height: auto;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 630px);
+    justify-content: center;
+    grid-gap: 40px;
+}
+
+.grid-item{
+    width: 640px;
+    height: 400px;
+    margin: 100px auto;
 }
 
