@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Bar with Search Box</title>
-    <!-- CSS -->
-    <!-- Unicons CSS -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <script src="Style/JS/accueil.js" defer></script>
-</head>
 <body>
 <div class="top-band">
     <h3 class="text">Nouveauté : le site est maintenant disponible en anglais. Essayer !</h3>
@@ -70,8 +57,16 @@
 </div>
 
 <div class="grille">
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
+    <div class="grid-item">
+        <div class="title-black">Suivez votre <span style="color: var(--error-color)">activité cardiaque</span> tout au long de la journée . . .</div>
+        <div class="text-hard-text">Le coeur peut être mis à rude épreuve lors d'important travaux, suivre l'évolution de ces battements au court de
+            la journée peut être particulièrement utile. <br><br>Lorem ipsum dolor sit amet. Et error sunt qui quia totam et rerum assumenda At molestiae tenetur. Quo error galisum sit aspernatur esse ab corrupti obcaecati. </div>
+    </div>
+    <div class="grid-item">
+        <img src="style/resources/ecg.png" alt="image" height="90%" >
+    </div>
+
+
     <div class="grid-item"></div>
     <div class="grid-item"></div>
 
@@ -97,4 +92,4 @@
 </body>
 <script>
 </script>
-</html>
+

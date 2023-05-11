@@ -1,5 +1,5 @@
 /* Google Fonts - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @import url("couleur.css");
 
 * {
@@ -148,6 +148,7 @@ a {
 }
 
 
+
 .nav .button .login-button{
   font-size: 16px;
   font-weight: 700;
@@ -158,6 +159,65 @@ a {
   border: none;
   cursor: pointer;
 }
+
+.nav .animated-link-login{
+  display: inline-block;
+  background: var(--body-color);
+  border: 1px solid var(--primary-color);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.nav .animated-link-login span{
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  vertical-align: center;
+  padding: 5px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: transform 0.15s ease-out;
+}
+
+.nav .animated-link-login:hover span{
+  transform: translate(-4px, -3px);
+  color: var(--white);
+  background: var(--primary-color);
+
+}
+
+
+.nav .animated-link-signup{
+  display: inline-block;
+  background: var(--body-color);
+  border: 1px solid var(--primary-color);
+  text-decoration: none;
+}
+
+.nav .animated-link-signup span{
+  display: inline-block;
+  background: var(--body-color);
+  color: var(--primary-color);
+  text-align: center;
+  vertical-align: center;
+  padding: 5px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+
+.nav .animated-link-signup:hover span{
+  transform: translate(-4px, -3px);
+  color: var(--primary-color);
+  background: var(--body-color);
+  border: 1px solid var(--primary-color);
+
+}
+
 
 .nav .button .search-icon {
   color: var(--text-color);
@@ -233,18 +293,44 @@ a {
   }
 }
 
-.vide{
-  height: 60px;
-  position: relative;
-}
+
 
 .page{
   width: 100%;
 }
 
+.page .intro-title-primary{
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.page .intro-title-text{
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.page .text-presentation{
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
 .page .title-black{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--black);
   display: flex;
   justify-content: center;
@@ -252,7 +338,7 @@ a {
 
 .page .title-primary{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-color);
   display: flex;
   justify-content: center;
@@ -260,7 +346,7 @@ a {
 
 .page .title-error{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--error-color);
   display: flex;
   justify-content: center;
@@ -268,7 +354,7 @@ a {
 
 .page .title-succes{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--succes-color);
   display: flex;
   justify-content: center;
@@ -276,7 +362,7 @@ a {
 
 .page .title-warning{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--warning-color);
   display: flex;
   justify-content: center;
@@ -284,7 +370,7 @@ a {
 
 .page .title-text{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-color);
   display: flex;
   justify-content: center;
@@ -292,7 +378,7 @@ a {
 
 .page .title-hard-text{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-hard-color);
   display: flex;
   justify-content: center;
@@ -300,7 +386,7 @@ a {
 
 .page .sub-title-black{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--black);
   display: flex;
   justify-content: center;
@@ -308,7 +394,7 @@ a {
 
 .page .sub-title-primary{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-color);
   display: flex;
   justify-content: center;
@@ -316,7 +402,7 @@ a {
 
 .page .sub-title-error{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--error-color);
   display: flex;
   justify-content: center;
@@ -324,7 +410,7 @@ a {
 
 .page .sub-title-succes{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--succes-color);
   display: flex;
   justify-content: center;
@@ -332,7 +418,7 @@ a {
 
 .page .sub-title-warning{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--warning-color);
   display: flex;
   justify-content: center;
@@ -340,7 +426,7 @@ a {
 
 .page .sub-title-text{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-color);
   display: flex;
   justify-content: center;
@@ -348,7 +434,7 @@ a {
 
 .page .sub-title-hard-text{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-hard-color);
   display: flex;
   justify-content: center;
@@ -446,7 +532,7 @@ a {
 
 .card-primary .sub-title-light{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-light-color);
   display: flex;
   padding: 20px 0 0 15px;
@@ -476,7 +562,7 @@ a {
 
 .card-error .sub-title-light{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-light-color);
   display: flex;
   padding: 20px 0 0 15px;
@@ -507,7 +593,7 @@ a {
 
 .card-warning .sub-title-light{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-light-color);
   display: flex;
   padding: 20px 0 0 15px;
@@ -538,7 +624,7 @@ a {
 
 .card-yellow .sub-title-light{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-light-color);
   display: flex;
   padding: 20px 0 0 15px;
@@ -568,8 +654,40 @@ a {
 
 .card-succes .sub-title-light{
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-light-color);
   display: flex;
   padding: 20px 0 0 15px;
+}
+
+.prez {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+.product {
+  width: 12%;
+  height: 12%;
+}
+
+/* ==== Grille ==== */
+
+.grille {
+  max-width: 1500px;
+  width: 90%;
+  height: auto;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 600px);
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+.grid-item{
+  width: 600px;
+  height: 500px;
+  margin: 100px auto;
+  background: var(--error-color);
 }
