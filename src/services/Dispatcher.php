@@ -67,7 +67,8 @@ class Dispatcher
             }
         }
         else{
-            include('controller/home/index.php');
+            include('controller/home/Home.php');
+            \Home::renderMainView();
         }
     }
 
