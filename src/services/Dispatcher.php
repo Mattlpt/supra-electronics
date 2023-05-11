@@ -4,6 +4,7 @@ namespace services;
 
 use Analytics;
 use controller\public\Accueil;
+use controller\user\UserController;
 use Messagerie;
 use Stats;
 use controller\config\Configu;
@@ -54,7 +55,8 @@ class Dispatcher
                     break;
 
                 case 'user':
-                    include('controller/user/index.php');
+                    include('controller/user/UserController.php');
+                    UserController::user();
                     break;
 
                 case'supraelectronic':
