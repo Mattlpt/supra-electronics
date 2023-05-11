@@ -2,6 +2,13 @@
 
 namespace services;
 
+use Analytics;
+use controller\public\Accueil;
+use controller\user\UserController;
+use Messagerie;
+use Stats;
+use controller\config\Configu;
+
 class Dispatcher
 {
     private ?string $page = null;
@@ -27,28 +34,34 @@ class Dispatcher
                     break;
 
                 case 'config':
-                    include('controller/config/config.php');
+                    include('controller/config/Configu.php');
+                    Configu::initialize();
                     break;
 
                 case 'stats':
-                    include('controller/analyse/stats.php');
+                    include('controller/analyse/Stats.php');
+                    Stats::renderMainView();
                     break;
 
                 case 'analytics':
 
-                    include('controller/analyse/analytics.php');
+                    include('controller/analyse/Analytics.php');
+                    Analytics::renderMainView();
                     break;
 
                 case 'messagerie':
-                    include('controller/contact/messagerie.php');
+                    include('controller/contact/Messagerie.php');
+                    Messagerie::renderMainView();
                     break;
 
                 case 'user':
-                    include('controller/user/index.php');
+                    include('controller/user/UserController.php');
+                    UserController::user();
                     break;
 
                 case'supraelectronic':
-                    include('controller/public/accueil.php');
+                    include('controller/public/Accueil.php');
+                    Accueil::renderMainView();
                     break;
 
                 default:
@@ -56,7 +69,8 @@ class Dispatcher
             }
         }
         else{
-            include('controller/home/index.php');
+            include('controller/home/Home.php');
+            \Home::renderMainView();
         }
     }
 
