@@ -40,7 +40,7 @@
 
             <span class="button">
         <i class="uil uil-search search-icon" id="searchIcon"></i>
-        <a class="animated-link-signup" onclick="window.location.href = '/'">
+        <a class="animated-link-signup" onclick="window.location.href = '/register'">
                 <span>Inscription</span>
         </a>
 

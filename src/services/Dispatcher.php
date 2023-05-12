@@ -64,6 +64,10 @@ class Dispatcher
                     Accueil::renderMainView();
                     break;
 
+                case 'register' :
+                    include('controller/security/register.php');
+                    break;
+
                 default:
                     include('controller/home/index.php');
             }
