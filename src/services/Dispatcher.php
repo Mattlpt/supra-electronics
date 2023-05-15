@@ -12,6 +12,7 @@ use Dashboard;
 use Messagerie;
 use Stats;
 use controller\config\Configu;
+use controller\security\Register; 
 
 class Dispatcher
 {
@@ -70,6 +71,9 @@ class Dispatcher
                     break;
 
                 case 'register' :
+                    include('controller/security/Register.php');
+                    Register::renderMainView();
+                    Register::registerUser();
                     include('controller/security/register.php');
                     Register::renderMainView();
                     Register::registerUser();

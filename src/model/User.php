@@ -12,7 +12,7 @@ class User
     private string $lastname = '';
     private string $password = '';
     private string $mail = '';
-    private int $user_statu = 0;
+    private int $user_status = 0;
     private int $user_bracelet = 0;
     private int $user_company = 0;
     private int $user_factory = 0;
@@ -132,12 +132,20 @@ class User
                 'id' => $this->id,
             ]);
         }else{
+<<<<<<< HEAD
             $query = $db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
+=======
+            $query = self::$db->prepare("
+                INSERT INTO `user` (`id_user`, `username_user`, `password_user`, `lastname_user`, `firstname_user`, `email_user`)
+                VALUES (NULL,:username,:password,:nom,:prenom,:mail)
+            ");
+>>>>>>> cd04583... login
             $result = $query->execute([
                 'username'=>$this->username,
                 'password'=>$this->password,
                 'nom'=>$this->lastname,
                 'prenom'=>$this->firstname,
+                'password'=>$this->password,
                 'mail'=>$this->mail,
             ]);
         }
