@@ -67,6 +67,9 @@ class Dispatcher
                 case 'register' :
                     include('controller/security/register.php');
                     break;
+                case'CGU':
+                    include('controller/public/CGU.php');
+                    break;
 
                 default:
                     include('controller/home/index.php');
