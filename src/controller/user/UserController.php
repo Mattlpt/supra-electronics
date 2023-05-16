@@ -3,6 +3,7 @@
 namespace controller\user;
 
 use model\User;
+use model\connection;
 
 class UserController
 {
@@ -12,8 +13,6 @@ class UserController
 
     public static function user():void
     {
-        $db = $GLOBALS['db'];
-        User::$db = $db;
         if($GLOBALS['dispatcher']->getPage() !== null && $GLOBALS['dispatcher']->getPage()  !== '')
         {
 
@@ -87,13 +86,13 @@ class UserController
             //page d'accueil des users
 
             //la j'appelle le modèle pour selectioner tous les users
-            $userListe = User::getAllUser($db);
+            $userListe = User::getAllUser();
             $vars['usersListe'] = $userListe;
 
             //là je selectionne un seul User à partir du modèle
-            $moi = User::getOneOrNullUserById(1,$db);
+            $moi = User::getOneOrNullUserById(1);
             //là je selection un ou plusieurs user dont le fistname est julein
-            $julien = User::getUsersByField('firstname_user','julien',$db);
+            $julien = User::getUsersByField('firstname_user','julien');
 
 
             renderView('user/user.view.php',$vars, 'Utilisateurs');

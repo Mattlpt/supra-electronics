@@ -1,8 +1,8 @@
 <?php
 
 namespace model;
+use model\connection;
 
-use PDO;
 
 class User
 {
@@ -33,8 +33,6 @@ class User
     {
         $this->mail = $mail;
     }
-
-    public static PDO $db;
 
 
     /**
@@ -120,9 +118,10 @@ class User
 
     public function insertOrUpdate():void
     {
+        $db = $GLOBALS['connection']->getDb();
         if($this->id !== 0)
         {
-            $query = self::$db->prepare("UPDATE user SET username_user = :username, password_user = :password, firstname_user = :firstname, lastname_user = :lastname, email_user = :email WHERE id_user = :id 
+            $query = $db->prepare("UPDATE user SET username_user = :username, password_user = :password, firstname_user = :firstname, lastname_user = :lastname, email_user = :email WHERE id_user = :id 
             ");
             $result = $query->execute([
                 'username' => $this->username,
@@ -133,7 +132,7 @@ class User
                 'id' => $this->id,
             ]);
         }else{
-            $query = self::$db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
+            $query = $db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
             $result = $query->execute([
                 'username'=>$this->username,
                 'password'=>$this->password,
@@ -146,16 +145,18 @@ class User
 
     public function delete():void
     {
+        $db = $GLOBALS['connection']->getDb();
         if($this->getId() !== 0)
         {
-            $query = self::$db->prepare("DELETE FROM user WHERE id_user = :id");
+            $query = $db->prepare("DELETE FROM user WHERE id_user = :id");
             $query->execute(['id'=>$this->getId()]);
         }
     }
 
     public static function  getAllUser(): array
     {
-        $query = self::$db->prepare("SELECT * FROM user");
+        $db = $GLOBALS['connection']->getDb();
+        $query = $db->prepare("SELECT * FROM user");
         $query->execute();
         $results = $query->fetchAll();
         $array = [];
@@ -176,7 +177,8 @@ class User
 
     public static function  getOneOrNullUserById(int $id): ?User
     {
-        $query = self::$db->prepare("SELECT * FROM user WHERE id_user = :id");
+        $db = $GLOBALS['connection']->getDb();
+        $query = $db->prepare("SELECT * FROM user WHERE id_user = :id");
         $query->execute(['id'=>$id]);
         $results = $query->fetchAll();
 
@@ -195,7 +197,8 @@ class User
 
     public static function  getUsersByField(string $field, string $value): array
     {
-        $query = self::$db->prepare("SELECT * FROM user WHERE $field = :val");
+        $db = $GLOBALS['connection']->getDb();
+        $query = $db->prepare("SELECT * FROM user WHERE $field = :val");
         $query->execute(['val'=>$value]);
         $results = $query->fetchAll();
         $array = [];

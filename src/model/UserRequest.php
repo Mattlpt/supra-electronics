@@ -2,9 +2,12 @@
 
 use PDO;
 
-public static PDO $db;
-$db = $GLOBALS['db'];
-
-public static fetchUser() {
-    
+function fetchUser(String $string) {
+    $query = $db->prepare("Select * FROM user WHERE username_user = :username");
+    $query->execute([
+        'username'=>$string
+    ]);
+    $result = $query->fetchAll();
+    return $result;
 }
+?>

@@ -35,8 +35,7 @@ class Dispatcher
                     break;
 
                 case 'config':
-                    include('controller/config/Configu.php');
-                    Configu::initialize();
+                    include('controller/config/config.php');
                     break;
 
                 case 'stats':
