@@ -133,12 +133,10 @@ class User
                 'id' => $this->id,
             ]);
         }else{
-            $query = self::$db->prepare("
-                INSERT INTO `user` (`id_user`, `username_user`, `password_user`, `lastname_user`, `firstname_user`, `email_user`)
-                VALUES (NULL,:username,'',:nom,:prenom,:mail)
-            ");
+            $query = self::$db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
             $result = $query->execute([
                 'username'=>$this->username,
+                'password'=>$this->password,
                 'nom'=>$this->lastname,
                 'prenom'=>$this->firstname,
                 'mail'=>$this->mail,
