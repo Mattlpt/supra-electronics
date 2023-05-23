@@ -6,6 +6,7 @@ use Analytics;
 use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
+use Dashboard;
 use Messagerie;
 use Stats;
 use controller\config\Configu;
@@ -72,6 +73,11 @@ class Dispatcher
                     break;
                 case'CGU':
                     include('controller/public/CGU.php');
+                    break;
+                
+                case 'dashboard':
+                    include('controller/dashboard/Dashboard.php');
+                    Dashboard::renderMainView();
                     break;
 
                 default:
