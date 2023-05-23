@@ -78,6 +78,7 @@ class Dispatcher
                 case 'home' :
                     include("controller/home/Home.php");
                     Home::renderMainView();
+                    break;
                 case'CGU':
                     include('controller/public/CGU.php');
                     break;
