@@ -1,15 +1,20 @@
 <?php
 use services\Dispatcher;
+use model\Connection;
 require('services/Dispatcher.php');
+require('model/Connection.php');
 require('model/User.php');
 include('header.php');
-
+if ( empty(session_id()) ) session_start();
 
 
 //REQUEST MANAGEMENT
 $url = $_SERVER['REQUEST_URI'];
 $dispatcher = new Dispatcher($url);
+$connection = new Connection();
+$connection->start();
 $GLOBALS['dispatcher'] = $dispatcher;
+$GLOBALS['connection'] = $connection;
 $dispatcher->dispatch();
 
 

@@ -2,6 +2,8 @@
 namespace controller\security;
 
 use model\User;
+use src\model\connection;
+include('model/UserRequest.php');
 
 class Register{
 
@@ -29,8 +31,6 @@ class Register{
         }
         if($check) {
             if($_POST['password'] == $_POST['confirm_password']) {
-                $db = $GLOBALS['db'];
-                User::$db = $db;
                 $user = new User();
                 $user->setUsername($_POST['username']);
                 $user->setFirstname($_POST['firstname']);
@@ -48,5 +48,7 @@ class Register{
             $alerte = "Veuillez remplir tt les champs";
         }
         var_dump($alerte);
+        $val = fetchUser("jule");
+        var_dump($val);
     }
 }

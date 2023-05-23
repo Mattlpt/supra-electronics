@@ -3,6 +3,7 @@
 namespace services;
 
 use Analytics;
+use controller\security\Login;
 use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
@@ -32,12 +33,13 @@ class Dispatcher
             switch ($this->module)
             {
                 case 'login':
-                    include('controller/secure/login.php');
+                    include('controller/security/login.php');
+                    Login::renderMainView();
+                    Login::loginUser();
                     break;
 
                 case 'config':
-                    include('controller/config/Configu.php');
-                    Configu::initialize();
+                    include('controller/config/config.php');
                     break;
 
                 case 'stats':
@@ -71,6 +73,7 @@ class Dispatcher
                     Register::renderMainView();
                     Register::registerUser();
                     break;
+                
                 case'CGU':
                     include('controller/public/CGU.php');
                     break;
@@ -85,8 +88,8 @@ class Dispatcher
             }
         }
         else{
-            include('controller/home/Home.php');
-            \Home::renderMainView();
+            include('controller/public/accueil.php');
+            Accueil::renderMainView();
         }
     }
 
