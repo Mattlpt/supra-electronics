@@ -3,6 +3,7 @@
 namespace services;
 
 use Analytics;
+use controller\home\Home;
 use controller\security\Login;
 use controller\security\Register;
 use controller\public\Accueil;
@@ -74,11 +75,9 @@ class Dispatcher
                     break;
                 
                 case 'home' :
-                    include("controller/home.index.php");
+                    include("controller/home/Home.php");
                     Home::renderMainView();
 
-                default:
-                    include('controller/home/index.php');
             }
         }
         else{

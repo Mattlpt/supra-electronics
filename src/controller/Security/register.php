@@ -30,19 +30,24 @@ class Register{
             }
         }
         if($check) {
-            if($_POST['password'] == $_POST['confirm_password']) {
-                $user = new User();
-                $user->setUsername($_POST['username']);
-                $user->setFirstname($_POST['firstname']);
-                $user->setLastname($_POST['lastname']);
-                $user->setMail($_POST['email']);
-                $user->setPassword($_POST['password']);
-                $user->insertOrUpdate();
+            $fetcheduser = fetchUser($_POST['username']);
+            if($fetcheduser == null) {
+                if($_POST['password'] == $_POST['confirm_password']) {
+                    $user = new User();
+                    $user->setUsername($_POST['username']);
+                    $user->setFirstname($_POST['firstname']);
+                    $user->setLastname($_POST['lastname']);
+                    $user->setMail($_POST['email']);
+                    $user->setPassword($_POST['password']);
+                    $user->insertOrUpdate();
+                }
+                else {
+                    $alerte = "les mdp match pas";
+                }
             }
             else {
-                $alerte = "les mdp match pas";
+                $alerte = "le nom d'utilisateur est deja pris";
             }
-            
         }
         else {
             $alerte = "Veuillez remplir tt les champs";

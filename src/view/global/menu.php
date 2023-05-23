@@ -77,7 +77,7 @@
 
         <div class="bottom-content">
             <li class="">
-                <a href="#" onclick="window.location.href = '/supraelectronic'">
+                <a href="" onclick="window.location.href = '/supraelectronic'">
                     <i class='bx bx-log-out icon' ></i>
                     <span class="text nav-text">Logout</span>
                 </a>
