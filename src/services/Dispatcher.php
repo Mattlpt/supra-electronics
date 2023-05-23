@@ -7,6 +7,7 @@ use controller\security\Login;
 use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
+use Dashboard;
 use Messagerie;
 use Stats;
 use controller\config\Configu;
@@ -73,9 +74,14 @@ class Dispatcher
                     Register::registerUser();
                     break;
                 
-                case 'home' :
-                    include("controller/home.index.php");
-                    Home::renderMainView();
+                case'CGU':
+                    include('controller/public/CGU.php');
+                    break;
+                
+                case 'dashboard':
+                    include('controller/dashboard/Dashboard.php');
+                    Dashboard::renderMainView();
+                    break;
 
                 default:
                     include('controller/home/index.php');
