@@ -32,7 +32,17 @@ class Login{
             $user = fetchUser($_POST['username']);
             if($user['password_user'] == $_POST['password']) {
                 $_SESSION['logged_user'] = $user;
-                header("Location: /user");
+                switch($_SESSION['logged_user']['status_user']) {
+                    case 0:
+                        $_SESSION['logged_user']['status_user'] = "utilisateur";
+                        break;
+                    case 1:
+                        $_SESSION['logged_user']['status_user'] = "gestionnaire";
+                        break;
+                    case 2:
+                        $_SESSION['logged_user']['status_user'] = "administrateur";
+                        break;
+                    }
             }
         }
             

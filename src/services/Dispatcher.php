@@ -3,6 +3,7 @@
 namespace services;
 
 use Analytics;
+use controller\home\Home;
 use controller\security\Login;
 use controller\security\Register;
 use controller\public\Accueil;
@@ -75,6 +76,10 @@ class Dispatcher
                     Register::registerUser();
                     break;
                 
+                case 'home' :
+                    include("controller/home/Home.php");
+                    Home::renderMainView();
+                    break;
                 case'CGU':
                     include('controller/public/CGU.php');
                     break;
@@ -83,6 +88,7 @@ class Dispatcher
                     include('controller/dashboard/Dashboard.php');
                     Dashboard::renderMainView();
                     break;
+
 
                 case 'home' :
                     include("controller/home.index.php");
