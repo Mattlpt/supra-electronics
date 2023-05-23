@@ -71,6 +71,7 @@ class UserController
                 //suppresion d'un user
                 case 'delete':
                     //là il faudrait vérifier si on a le droit de faire cette action...
+
                     if(!empty($_GET))
                     {
                         $user = getOneOrNullUserById($_GET['id']);

@@ -22,10 +22,7 @@
                         <i class='bx bxs-edit'></i>
                     </a>
                     <a class="show-warning-modal" href="/user/delete?id=<?php echo $user->getId(); ?>">Supp.</a>
-                    <div class="buttons">
-                        <a class="close-warning-btn">Annuler</a>
-                    </div>
-                    <span class="show-warning-modal">Se risquer</span>
+                    <a class="show-warning-modal" href="/user/">Supp confirm.</a>
 
                 </td>
             </tr>

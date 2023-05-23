@@ -1,6 +1,6 @@
 <section class="home">
 
-    <div class="title-text">Mansion Légale</div>
+    <div class="title-text">Mention Légale</div>
     <div class="content-body">
 
         <p>
