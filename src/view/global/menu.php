@@ -63,6 +63,13 @@
                     </a>
                 </li>
 
+                <li class="nav-link">
+                    <a href="#" onclick="window.location.href = '/forum'">
+                        <i class='bx bx-question-mark icon'></i>
+                        <span class="text nav-text">FAQ</span>
+                    </a>
+                </li>
+
                 <li class="title"> Réglage </li>
 
                 <li class="nav-link">

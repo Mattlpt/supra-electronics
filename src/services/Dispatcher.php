@@ -3,6 +3,7 @@
 namespace services;
 
 use Analytics;
+use controller\contact\Forum;
 use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
@@ -56,6 +57,11 @@ class Dispatcher
                     Messagerie::renderMainView();
                     break;
 
+                case 'forum':
+                    include('controller/contact/Forum.php');
+                    Forum::renderMainView();
+                    break;
+
                 case 'user':
                     include('controller/user/UserController.php');
                     UserController::user();
@@ -71,6 +77,7 @@ class Dispatcher
                     Register::renderMainView();
                     Register::registerUser();
                     break;
+
                 case'CGU':
                     include('controller/public/CGU.php');
                     break;
