@@ -73,6 +73,11 @@ class Dispatcher
                 case'CGU':
                     include('controller/public/CGU.php');
                     break;
+                
+                case 'dashboard':
+                    include('controller/dashboard/Dashboard.php');
+                    Dashboard::renderMainView();
+                    break;
 
                 default:
                     include('controller/home/index.php');
