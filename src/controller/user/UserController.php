@@ -4,6 +4,7 @@ namespace controller\user;
 
 use model\User;
 use model\connection;
+include('model/UserRequest.php');
 
 class UserController
 {
@@ -45,7 +46,7 @@ class UserController
                 case 'update':
                     if(isset($_GET['id']) && $_GET['id']>0)
                     {
-                        $user = User::getOneOrNullUserById($_GET['id']);
+                        $user = getOneOrNullUserById($_GET['id']);
                         if(empty($_POST))
                         {
                             //affichage du formulaire pré-rempli
@@ -72,7 +73,7 @@ class UserController
                     //là il faudrait vérifier si on a le droit de faire cette action...
                     if(!empty($_GET))
                     {
-                        $user = User::getOneOrNullUserById($_GET['id']);
+                        $user = getOneOrNullUserById($_GET['id']);
                         if($user !== null)
                         {
                             $user->delete();
@@ -86,13 +87,13 @@ class UserController
             //page d'accueil des users
 
             //la j'appelle le modèle pour selectioner tous les users
-            $userListe = User::getAllUser();
+            $userListe = getAllUser();
             $vars['usersListe'] = $userListe;
 
             //là je selectionne un seul User à partir du modèle
-            $moi = User::getOneOrNullUserById(1);
+            $moi = getOneOrNullUserById(1);
             //là je selection un ou plusieurs user dont le fistname est julein
-            $julien = User::getUsersByField('firstname_user','julien');
+            $julien = getUsersByField('firstname_user','julien');
 
 
             renderView('user/user.view.php',$vars, 'Utilisateurs');

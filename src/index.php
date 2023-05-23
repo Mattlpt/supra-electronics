@@ -5,7 +5,7 @@ require('services/Dispatcher.php');
 require('model/Connection.php');
 require('model/User.php');
 include('header.php');
-
+if ( empty(session_id()) ) session_start();
 
 
 //REQUEST MANAGEMENT
