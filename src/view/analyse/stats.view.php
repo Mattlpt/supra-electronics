@@ -21,10 +21,10 @@
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Matthieu', 'Julien', 'Eli', 'Zhou', 'Marius'],
+                    labels: [],
                     datasets: [{
                         label: 'heure par jour',
-                        data: [23, 22, 10, 0, -3],
+                        data: [],
                         borderWidth: 1
                     }]
                 },
