@@ -9,6 +9,7 @@ use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
 use Dashboard;
+use Home;
 use Messagerie;
 use Stats;
 use controller\config\Configu;
@@ -88,6 +89,15 @@ class Dispatcher
                     Dashboard::renderMainView();
                     break;
 
+
+                case 'home' :
+                    include("controller/home.index.php");
+                    Home::renderMainView();
+                    break;
+
+
+                default:
+                    include('controller/home/index.php');
             }
         }
         else{
