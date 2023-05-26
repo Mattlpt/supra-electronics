@@ -10,6 +10,7 @@
             <input type="text" placeholder="Enter your email" name="email">
             <input type="password" placeholder="Create a password" name="password">
             <input type="password" placeholder="Confirm your password" name="confirm_password">
+            <a href="/login" class="link">login</a>
             <input type="submit" class="button" value="Register">
         </form>
     </div>

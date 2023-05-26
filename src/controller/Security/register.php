@@ -53,7 +53,5 @@ class Register{
             $alerte = "Veuillez remplir tt les champs";
         }
         var_dump($alerte);
-        $val = fetchUser("jule");
-        var_dump($val);
     }
 }

@@ -10,4 +10,8 @@ class Messagerie{
     {
         renderView("contact/messagerie.view.php", NULL, "messagerie");
     }
+
+    public static function displayMessages() {
+        
+    }
 }
