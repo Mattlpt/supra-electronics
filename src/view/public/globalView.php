@@ -6,9 +6,8 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/style/AccueilPublic.css">
-    <link rel="stylesheet" href="/style/login.css">
 </head>
-<body>
+
 
 <?php
 include($page_include);

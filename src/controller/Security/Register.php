@@ -3,6 +3,7 @@ namespace controller\security;
 
 use model\User;
 use src\model\connection;
+
 include('model/UserRequest.php');
 
 class Register{
@@ -53,7 +54,5 @@ class Register{
             $alerte = "Veuillez remplir tt les champs";
         }
         var_dump($alerte);
-        $val = fetchUser("jule");
-        var_dump($val);
     }
 }

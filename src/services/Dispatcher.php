@@ -9,7 +9,6 @@ use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
 use Dashboard;
-use Home;
 use Messagerie;
 use Stats;
 use controller\config\Configu;
@@ -95,6 +94,10 @@ class Dispatcher
                     Home::renderMainView();
                     break;
 
+                case 'connexion' :
+                    include('controller/Security/Login.php');
+                    Login::loginUser();
+                    break;
 
                 default:
                     include('controller/home/index.php');
