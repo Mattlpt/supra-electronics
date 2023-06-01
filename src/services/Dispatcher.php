@@ -3,6 +3,7 @@
 namespace services;
 
 use Analytics;
+use controller\contact\Quizz;
 use controller\home\Home;
 use controller\security\Login;
 use controller\security\Register;
@@ -97,6 +98,12 @@ class Dispatcher
                 case 'connexion' :
                     include('controller/Security/Login.php');
                     Login::loginUser();
+                    break;
+
+                case 'quizz' :
+                    include('controller/contact/Quizz.php');
+                    Quizz::renderMainView();
+                    Quizz::quizz();
                     break;
 
                 default:

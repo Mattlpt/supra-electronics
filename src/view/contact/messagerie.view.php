@@ -6,9 +6,9 @@
         </div>
         <div class="input_area">
             <form action="" method="POST">
-            <input type="text" class="input" name="input" placeholder="type here">
-            <input class="submit" type="button" value=" ">
+                <input type="text" class="input" name="input" placeholder="type here">
+                <input class="submit" type="button" value=" ">
             </form>
         </div>
     </div>
-</section><!-- Contenu principal -->
+</section>
