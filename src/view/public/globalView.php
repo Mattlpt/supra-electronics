@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style/AccueilPublic.css">
     <link rel="stylesheet" href="/style/login.css">
 </head>
-<body>
+
 
 <?php
 include($page_include);

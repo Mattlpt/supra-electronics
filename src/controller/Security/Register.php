@@ -3,6 +3,7 @@ namespace controller\security;
 
 use model\User;
 use src\model\connection;
+
 include('model/UserRequest.php');
 
 class Register{
