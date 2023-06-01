@@ -44,7 +44,7 @@
                 <span>Inscription</span>
         </a>
 
-        <a class="animated-link-login" onclick="window.location.href = '/'">
+        <a class="animated-link-login" onclick="window.location.href = '/login'">
                 <span>Connexion</span>
         </a>
     </span>

@@ -2,31 +2,17 @@
 <div class="container">
     <input type="checkbox" id="check">
     <div class="login form">
-        <header>Signup</header>
-        <form method="POST" action="">
-            <div class="grille">
-                <div class="grille-item">
-                    <input type="text" placeholder="Enter your username" name="username">
-                    <input type="text" placeholder="Enter your firstname" name="firstname">
-                    <input type="text" placeholder="Enter your lastname" name="lastname">
-                </div>
-                <div class="grille-item">
-                    <input type="text" placeholder="Enter your email" name="email">
-                    <input type="password" placeholder="Create a password" name="password">
-                    <input type="password" placeholder="Confirm your password" name="confirm_password">
-                </div>
-            </div>
-            <input type="submit" class="button" value="Register">
+        <header>Login</header>
+        <form method="POST" action="connexion">
+            <input type="text" placeholder="Enter your username" name="username">
+            <input type="password" placeholder="Enter your password" name="password">
+            <input type="submit" class="button" value="Login">
         </form>
-        <div class="link">
-            <a href="/supraelectronic" class="link">< Back</a>
-            <a href="/login" class="link">Already have an account ? Login</a>
-
-        </div>
-
-
     </div>
-    <div class="signup">
+    <div class="link">
+        <a href="/supraelectronic" class="link">< Back</a>
+        <a href="/register" class="link">Dont have an account ? SignUp</a>
+
     </div>
 </div>
 </body>
@@ -41,16 +27,18 @@
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
     }
+
     body{
         background-image: url("style/resources/547327.jpg");
         background-size: cover;
     }
+
     .container{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        max-width: 1000px;
+        max-width: 430px;
         width: 100%;
         background: var(--body-color);
         border-radius: 7px;
@@ -71,7 +59,6 @@
     .container .form{
         padding: 2rem;
     }
-
     .form header{
         font-size: 2rem;
         font-weight: 500;
@@ -80,16 +67,13 @@
     }
     .form input{
         height: 60px;
-        width: 400px;
+        width: 100%;
         padding: 0 15px;
         font-size: 17px;
         margin-bottom: 1.3rem;
         border: 1px solid #ddd;
         border-radius: 6px;
         outline: none;
-
-        justify-content: center;
-        align-content: center;
     }
     .form input:focus{
         box-shadow: 0 1px 0 rgba(0,0,0,0.2);
@@ -108,10 +92,9 @@
         font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: 1px;
-        margin-top: 1rem;
+        margin-top: 1.7rem;
         cursor: pointer;
         transition: 0.4s;
-        margin-left: 29%;
     }
     .form input.button:hover{
         background: var(--primary-color);
@@ -128,28 +111,20 @@
         text-decoration: underline;
     }
 
-    .grille {
-        max-width: 1500px;
-        width: 90%;
-        height: auto;
-        margin: 50px auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 400px);
-        justify-content: center;
-        grid-gap: 20px;
-    }
-
-    .grid-item{
-        width: 400px;
-        height: 500px;
-        margin: 100px auto;
-    }
-
     .link{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 45px;
     }
 
+    .link a{
+        margin: 20px 20px;
+        font-size: 16px;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .link a:hover{
+        text-decoration: underline;
+    }
 </style>

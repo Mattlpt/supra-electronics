@@ -3,8 +3,12 @@
 namespace services;
 
 use Analytics;
+use controller\home\Home;
+use controller\security\Login;
+use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
+use Dashboard;
 use Messagerie;
 use Stats;
 use controller\config\Configu;
@@ -30,12 +34,13 @@ class Dispatcher
             switch ($this->module)
             {
                 case 'login':
-                    include('controller/secure/login.php');
+                    include('controller/security/login.php');
+                    Login::renderMainView();
+                    Login::loginUser();
                     break;
 
                 case 'config':
-                    include('controller/config/Configu.php');
-                    Configu::initialize();
+                    include('controller/config/config.php');
                     break;
 
                 case 'stats':
@@ -66,6 +71,32 @@ class Dispatcher
 
                 case 'register' :
                     include('controller/security/register.php');
+                    Register::renderMainView();
+                    Register::registerUser();
+                    break;
+                
+                case 'home' :
+                    include("controller/home/Home.php");
+                    Home::renderMainView();
+                    break;
+                case'CGU':
+                    include('controller/public/CGU.php');
+                    break;
+                
+                case 'dashboard':
+                    include('controller/dashboard/Dashboard.php');
+                    Dashboard::renderMainView();
+                    break;
+
+
+                case 'home' :
+                    include("controller/home.index.php");
+                    Home::renderMainView();
+                    break;
+
+                case 'connexion' :
+                    include('controller/Security/Login.php');
+                    Login::loginUser();
                     break;
 
                 default:
@@ -73,8 +104,8 @@ class Dispatcher
             }
         }
         else{
-            include('controller/home/Home.php');
-            \Home::renderMainView();
+            include('controller/public/accueil.php');
+            Accueil::renderMainView();
         }
     }
 

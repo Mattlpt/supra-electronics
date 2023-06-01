@@ -1,7 +1,6 @@
 <?php
-namespace controller\home;
 
-class Home{
+class Dashboard{
 
     public function __construct()
     {
@@ -9,6 +8,6 @@ class Home{
 
     public static function renderMainView():void
     {
-        renderView('home/index.view.php');
+        renderView("dashboard/Dashboard.view.php", NULL, "dashboard");
     }
 }

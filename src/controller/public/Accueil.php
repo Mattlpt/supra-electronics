@@ -12,6 +12,7 @@ class Accueil
     public static function renderMainView(): void
     {
         renderPublicView('public/accueil.view.php', NULL, "Supra Electronics");
+        session_destroy();
     }
 
 }
