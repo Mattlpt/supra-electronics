@@ -21,9 +21,7 @@
                 <td><a class="button button-warning" href="/user/update?id=<?php echo $user->getId(); ?>">
                         <i class='bx bxs-edit'></i>
                     </a>
-                    <a class="show-warning-modal" href="/user/delete?id=<?php echo $user->getId(); ?>">Supp.</a>
-                    <a class="show-warning-modal" href="/user/">Supp confirm.</a>
-
+                    <a href="/user/delete?id=<?php echo $user->getId(); ?>" class="confirmationLink">Supprimer</a>
                 </td>
             </tr>
             <?php } ?>
@@ -32,3 +30,26 @@
     </div>
 
 </section><!-- Contenu principal -->
+
+<script>
+
+    window.addEventListener('load', function() {
+        var confirmationLinks = document.getElementsByClassName('confirmationLink');
+
+        for (var i = 0; i < confirmationLinks.length; i++) {
+            confirmationLinks[i].addEventListener('click', function(event) {
+                event.preventDefault(); // Empêche le comportement par défaut du lien (redirection immédiate)
+
+                var confirmRedirect = confirm("Êtes-vous sûr de vouloir supprimer l'utilisateur ?");
+
+                if (confirmRedirect) {
+                    var url = this.getAttribute('href');
+                    window.location.href = url; // Redirige vers l'URL spécifiée
+                } else {
+                    console.log("L\'utilisateur n'a pas été supprimé. ");
+                }
+            });
+        }
+    });
+
+</script>
