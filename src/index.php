@@ -5,7 +5,9 @@ require('services/Dispatcher.php');
 require('model/Connection.php');
 require('model/User.php');
 include('header.php');
-if ( empty(session_id()) ) session_start();
+if ( empty(session_id()) ) {
+    session_start();
+}
 
 //REQUEST MANAGEMENT
 $url = $_SERVER['REQUEST_URI'];
@@ -21,9 +23,15 @@ function renderView($name, $vars = [], $title = 'Supraelectronics'): void
    // echo $name;
     if(file_exists('view/'.$name))
     {
+        if(isset($_SESSION['logged_user'])) {
+
         $page_include = 'view/'.$name;
         $page_title = $title;
         include('view/global/globalView.php');
+        }
+        else {
+            renderPublicView('public/accueil.view.php', NULL, "Supra Electronics");
+        }
     }else{
         echo "TEMPLATE INTROUVABLE";
        // header('HTTP/1.0 404 Not Found');

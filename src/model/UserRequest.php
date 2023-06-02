@@ -9,7 +9,12 @@ function fetchUser(String $string) {
         'username'=>$string
     ]);
     $result = $query->fetchAll();
-    return $result[0];
+    if(sizeof($result) == 0) {
+        return null;
+    }
+    else {
+        return $result[0];
+    }
 }
 
 function  getAllUser(): array
