@@ -12,4 +12,6 @@ class Forum
     {
         renderView("contact/forum.view.php", NULL, "forum");
     }
+
+
 }
