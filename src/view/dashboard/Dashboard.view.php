@@ -11,7 +11,7 @@
             <div class="grille-4-item">
                 <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                     <div class="card">
-                        <h5 class="card-header">Heart Rate</h5>
+                        <h4 class="card-header">Heart Rate</h4>
                         <div class="card-body">
                             <h5 class="card-title">xx</h5>
                             <p class="card-text">Feb 1 - Apr 1, Paris</p>
@@ -24,7 +24,7 @@
             <div class="grille-4-item">
                 <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                     <div class="card">
-                        <h5 class="card-header">Sound</h5>
+                        <h4 class="card-header">Sound</h4>
                         <div class="card-body">
                             <h5 class="card-title">xx</h5>
                             <p class="card-text">Feb 1 - Apr 1, Paris</p>
@@ -37,7 +37,7 @@
             <div class="grille-4-item">
                 <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                     <div class="card">
-                        <h5 class="card-header">CO2</h5>
+                        <h4 class="card-header">CO2</h4>
                         <div class="card-body">
                             <h5 class="card-title">xx</h5>
                             <p class="card-text">Feb 1 - Apr 1, Paris</p>
@@ -50,7 +50,7 @@
             <div class="grille-4-item">
                 <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
                     <div class="card">
-                        <h5 class="card-header">Sweat</h5>
+                        <h4 class="card-header">Sweat</h4>
                         <div class="card-body">
                             <h5 class="card-title">xx</h5>
                             <p class="card-text">Feb 1 - Apr 1, Paris</p>
@@ -64,7 +64,7 @@
         <div class="grille-2">
             <div class="grille-2-item">
                 <div class = "card">
-                    <h5 class="card-header">Latest measurement</h5>
+                    <h4 class="card-header">Latest measurement</h4>
                     <div class = "card-body">
                         <div class="table-responsive">
                             <table class="table" >
@@ -127,7 +127,7 @@
             <div class="grille-2-item">
                 <div class="col-12 col-xl-4">
                     <div class="card">
-                        <h5 class="card-header">Health Index</h5>
+                        <h4 class="card-header">Health Index</h4>
                         <div class="card-body">
                             <div id="traffic-chart"></div>
                         </div>
@@ -196,6 +196,22 @@
 </section><!-- Contenu principal -->
 
 <style>
+
+    p{
+        color: var(--text-color);
+    }
+
+    h4{
+        color: #707070;
+    }
+
+    h5{
+        color: var(--text-color);
+    }
+
+    h6{
+        color: var(--text-color);
+    }
 
     .card {
         border: 1px solid #ccc;
