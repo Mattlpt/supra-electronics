@@ -3,6 +3,7 @@
 namespace services;
 
 use Analytics;
+use controller\contact\Forum;
 use controller\home\Home;
 use controller\security\Login;
 use controller\security\Register;
@@ -59,6 +60,11 @@ class Dispatcher
                     Messagerie::renderMainView();
                     break;
 
+                case 'forum':
+                    include('controller/contact/Forum.php');
+                    Forum::renderMainView();
+                    break;
+
                 case 'user':
                     include('controller/user/UserController.php');
                     UserController::user();
@@ -79,6 +85,7 @@ class Dispatcher
                     include("controller/home/Home.php");
                     Home::renderMainView();
                     break;
+
                 case'CGU':
                     include('controller/public/CGU.php');
                     break;
