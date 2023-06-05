@@ -24,7 +24,7 @@
                     labels: ['Matthieu', 'Julien', 'Eli', 'Zhou', 'Marius'],
                     datasets: [{
                         label: 'heure par jour',
-                        data: [23, 22, 10, 0, -3],
+                        data: [10, 10, 10, 10, 0],
                         borderWidth: 1
                     }]
                 },
