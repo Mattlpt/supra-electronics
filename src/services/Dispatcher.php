@@ -63,6 +63,7 @@ class Dispatcher
                 case 'forum':
                     include('controller/contact/Forum.php');
                     Forum::renderMainView();
+                    Forum::newTopic();
                     break;
 
                 case 'user':

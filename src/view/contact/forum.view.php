@@ -1,22 +1,33 @@
 <section class="home">
     <div class="title-text">FAQ</div>
     <div class="content-body">
-
-        <form method="POST" action="" align="center">
-            <input type="text" name="pseudo">
+        <form method="POST" action="">
+            <input type="text" name="topic" placeholder="enter topic">
             <br><br>
-            <textarea name="message"></textarea>
-            <br>
-            <input type="submit" name="valider">
+            <input type="text" name="question" placeholder="enter question">
+            <br><br>
+            <input type="submit" name="valider" value="submit">
         </form>
-        <section id="messages"></section>
-        <script>
-            setInterval('load_messages ()', 500);
-            function load_message(){
-                $('#messages').load('loadMessages.php')
-            }
-        </script>
-
     </div>
-
-</section><!-- Contenu principal -->
+    <div class="topics">
+        <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Topic</th>
+            <th>Author</th>
+        </tr>
+        <tbody>
+            <?php
+                $topics = fetchAllTopics();
+                foreach($topics as $topic) {
+                    $user = fetchUserId($topic['author_forum']); ?>
+                    <tr>
+                        <td><?php echo($topic['id_forum']) ?></td>
+                        <td><?php echo($topic['topic_forum']) ?></td>
+                        <td><?php echo($user['username_user']) ?></td>
+                    </tr>
+                <?php }
+            ?>
+        </tbody>
+        </table>
+    </div>
