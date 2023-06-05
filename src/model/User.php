@@ -132,21 +132,13 @@ class User
                 'id' => $this->id,
             ]);
         }else{
-<<<<<<< HEAD
             $query = $db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
-=======
-            $query = self::$db->prepare("
-                INSERT INTO `user` (`id_user`, `username_user`, `password_user`, `lastname_user`, `firstname_user`, `email_user`)
-                VALUES (NULL,:username,:password,:nom,:prenom,:mail)
-            ");
->>>>>>> cd04583... login
             $result = $query->execute([
                 'username'=>$this->username,
                 'password'=>password_hash($this->password, PASSWORD_DEFAULT),
                 'nom'=>$this->lastname,
                 'prenom'=>$this->firstname,
-                'password'=>$this->password,
-                'mail'=>$this->mail,
+                'mail'=>$this->mail
             ]);
         }
     }

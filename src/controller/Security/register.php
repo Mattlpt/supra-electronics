@@ -41,6 +41,7 @@ class Register{
                     $user->setMail($_POST['email']);
                     $user->setPassword($_POST['password']);
                     $user->insertOrUpdate();
+                    $alerte = "success";
                 }
                 else {
                     $alerte = "les mdp match pas";

@@ -17,6 +17,14 @@ function fetchUser(String $string) {
     }
 }
 
+function  addUser() {
+        $db = $GLOBALS['connection']->getDb();
+        $query = $db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
+        $query->execute([
+        ]);
+        
+    }
+
 function  getAllUser(): array
     {
         $db = $GLOBALS['connection']->getDb();
