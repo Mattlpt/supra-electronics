@@ -13,9 +13,7 @@ use Dashboard;
 use Messagerie;
 
 use controller\analyse\Stats;
-
-use Stats;
-use controller\config\Configu; 
+use controller\config\Configu;
 
 class Dispatcher
 {
