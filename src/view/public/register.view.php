@@ -16,13 +16,19 @@
                     <input type="password" placeholder="Confirm your password" name="confirm_password">
                 </div>
             </div>
-            <input type="submit" class="button" value="Register">
+            <p id="checkboxContainer">
+                <input type="checkbox" id="myCheckbox" style=" height: 13px; width: 13px; " onchange="checkForm()" />
+                <label for="myCheckbox" style="color: var(--text-color  );">Je confirme que j'ai lu et accepté les termes et conditions.</label>
+                <a href="/readCGU">Lire</a>
+            </p>
+            <input type="submit" class="button" id="submitBtn" onclick="/login" value="Register">
         </form>
         <div class="link">
             <a href="/supraelectronic" class="link">< Back</a>
             <a href="/login" class="link">Already have an account ? Login</a>
 
         </div>
+
 
 
     </div>
@@ -112,6 +118,8 @@
         cursor: pointer;
         transition: 0.4s;
         margin-left: 29%;
+        opacity: 0.5;
+        pointer-events: none;
     }
     .form input.button:hover{
         background: var(--primary-color);
@@ -145,6 +153,8 @@
         margin: 100px auto;
     }
 
+
+
     .link{
         display: flex;
         justify-content: center;
@@ -152,4 +162,30 @@
         margin: 0 45px;
     }
 
+    #checkboxContainer {
+        text-align: center;
+    }
+
 </style>
+
+<script>
+    function checkForm() {
+        var checkBox = document.getElementById("myCheckbox");
+        var submitBtn = document.getElementById("submitBtn");
+
+        if (checkBox.checked) {
+            submitBtn.style.opacity = "1";
+            submitBtn.style.pointerEvents = "auto";
+
+
+        } else {
+            submitBtn.style.opacity = "0.5";
+            submitBtn.style.pointerEvents = "none";
+        }
+    }
+
+
+
+
+
+</script>

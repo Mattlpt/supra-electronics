@@ -5,6 +5,7 @@ namespace services;
 use Analytics;
 use controller\contact\Forum;
 use controller\home\Home;
+use controller\public\CGU;
 use controller\security\Login;
 use controller\security\Register;
 use controller\public\Accueil;
@@ -90,6 +91,7 @@ class Dispatcher
 
                 case'CGU':
                     include('controller/public/CGU.php');
+                    CGU::renderMainView();
                     break;
                 
                 case 'dashboard':
@@ -106,6 +108,11 @@ class Dispatcher
                 case 'connexion' :
                     include('controller/Security/Login.php');
                     Login::loginUser();
+                    break;
+
+                case 'readCGU':
+                    include('controller/public/CGU.php');
+                    CGU::renderAcceptenceView();
                     break;
 
                 default:
