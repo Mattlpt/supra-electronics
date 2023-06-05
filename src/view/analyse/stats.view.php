@@ -1,6 +1,16 @@
 <section class="home">
     <div class="title-text">Statistiques</div>
     <div class="content-body">
+
+        <div class="carte">
+            <h4>Température</h4>
+            <h6>Machine, Sale 2</h6>
+            <div class="container">
+                <temperature>29 ° C</temperature>
+            </div>
+
+        </div>
+
         <div>
             <canvas id="myChart" style="height: 100px; width: 300px;"></canvas>
         </div>
@@ -40,3 +50,39 @@
 
     </div>
 </section><!-- Contenu principal -->
+
+<style>
+    .carte{
+        width: 20%;
+        height: 20%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    h4{
+        color: var(--text-color);
+    }
+
+    h6{
+        color: var(--text-color);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    temperature{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        color: var(--text-color);
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 35px;
+
+    }
+</style>

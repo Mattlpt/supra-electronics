@@ -11,7 +11,7 @@ use controller\public\Accueil;
 use controller\user\UserController;
 use Dashboard;
 use Messagerie;
-use Stats;
+use controller\analyse\Stats;
 use controller\config\Configu;
 
 class Dispatcher
@@ -46,7 +46,7 @@ class Dispatcher
 
                 case 'stats':
                     include('controller/analyse/Stats.php');
-                    Stats::test();
+                    Stats::renderMainView();
                     break;
 
                 case 'analytics':
