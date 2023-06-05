@@ -17,12 +17,16 @@ function fetchUser(String $string) {
     }
 }
 
-function  addUser() {
+function  addUser($values) {
         $db = $GLOBALS['connection']->getDb();
         $query = $db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
         $query->execute([
+            "username"=>$values[0],
+            "prenom"=>$values[1],
+            "nom"=>$values[2],
+            "mail"=>$values[3],
+            "password"=>password_hash($values[4], PASSWORD_DEFAULT)
         ]);
-        
     }
 
     function removeUser($id) {
