@@ -17,19 +17,9 @@ class Forum
     }
 
     public static function newTopic(): void {
-        $values= [$_POST['topic'], $_POST['question']];
         $check = false;
-        foreach($values as $value) {
-            if(isset($value) && $value != '') {
-                $check = true;
-            }
-            else {
-                $check = false;
-                break;
-            }
-        }
-        if($check == true) {
-            addTopic($_POST['topic'], $_POST['question']); 
+        if((isset($_POST['topic']) && $_POST['topic'] != '') && (isset($_POST['question']) && $_POST['question'] !='')) {
+            addTopic($_POST['topic'], $_POST['question']);
         }
     }
 

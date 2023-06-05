@@ -23,7 +23,7 @@
                     $user = fetchUserId($topic['author_forum']); ?>
                     <tr>
                         <td><?php echo($topic['id_forum']) ?></td>
-                        <td><?php echo($topic['topic_forum']) ?></td>
+                        <td><a href="/forumtopic/<?php echo($topic['id_forum']) ?>"><?php echo($topic['topic_forum']) ?></a></td>
                         <td><?php echo($user['username_user']) ?></td>
                     </tr>
                 <?php }
