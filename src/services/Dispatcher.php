@@ -11,9 +11,11 @@ use controller\public\Accueil;
 use controller\user\UserController;
 use Dashboard;
 use Messagerie;
+
+use controller\analyse\Stats;
+
 use Stats;
 use controller\config\Configu; 
-
 
 class Dispatcher
 {
