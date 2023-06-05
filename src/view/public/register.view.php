@@ -16,13 +16,18 @@
                     <input type="password" placeholder="Confirm your password" name="confirm_password">
                 </div>
             </div>
-            <input type="submit" class="button" value="Register">
+            <p>
+                <input type="checkbox" id="myCheckbox" onchange="checkForm()" />
+                <label for="myCheckbox">Je confirme que j'ai lu et accepté les termes et conditions.</label>
+            </p>
+            <input type="submit" class="button" id="submitBtn" value="Register">
         </form>
         <div class="link">
             <a href="/supraelectronic" class="link">< Back</a>
             <a href="/login" class="link">Already have an account ? Login</a>
 
         </div>
+
 
 
     </div>
@@ -112,6 +117,7 @@
         cursor: pointer;
         transition: 0.4s;
         margin-left: 29%;
+        display: none;
     }
     .form input.button:hover{
         background: var(--primary-color);
@@ -153,3 +159,16 @@
     }
 
 </style>
+
+<script>
+    function checkForm() {
+        var checkBox = document.getElementById("myCheckbox");
+        var submitBtn = document.getElementById("submitBtn");
+
+        if (checkBox.checked) {
+            submitBtn.style.display = "block";
+        } else {
+            submitBtn.style.display = "none";
+        }
+    }
+</script>
