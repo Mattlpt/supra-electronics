@@ -25,6 +25,14 @@ function  addUser() {
         
     }
 
+    function removeUser($id) {
+        $db = $GLOBALS['connection']->getDb();
+        $query = $db->prepare("DELETE FROM user WHERE id_user = :id");
+        $query->execute([
+            'id'=>$id
+        ]);
+    }
+
 function  getAllUser(): array
     {
         $db = $GLOBALS['connection']->getDb();
