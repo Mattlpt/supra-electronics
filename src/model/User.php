@@ -12,7 +12,7 @@ class User
     private string $lastname = '';
     private string $password = '';
     private string $mail = '';
-    private int $user_statu = 0;
+    private int $user_status = 0;
     private int $user_bracelet = 0;
     private int $user_company = 0;
     private int $user_factory = 0;
@@ -125,7 +125,7 @@ class User
             ");
             $result = $query->execute([
                 'username' => $this->username,
-                'password' => $this->password,
+                'password' => password_hash($this->password, PASSWORD_DEFAULT),
                 'firstname' => $this->firstname,
                 'lastname'=> $this->lastname,
                 'email' => $this->mail,
@@ -135,10 +135,10 @@ class User
             $query = $db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
             $result = $query->execute([
                 'username'=>$this->username,
-                'password'=>$this->password,
+                'password'=>password_hash($this->password, PASSWORD_DEFAULT),
                 'nom'=>$this->lastname,
                 'prenom'=>$this->firstname,
-                'mail'=>$this->mail,
+                'mail'=>$this->mail
             ]);
         }
     }

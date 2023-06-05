@@ -11,8 +11,11 @@ use controller\public\Accueil;
 use controller\user\UserController;
 use Dashboard;
 use Messagerie;
+
 use controller\analyse\Stats;
-use controller\config\Configu;
+
+use Stats;
+use controller\config\Configu; 
 
 class Dispatcher
 {
@@ -63,6 +66,7 @@ class Dispatcher
                 case 'forum':
                     include('controller/contact/Forum.php');
                     Forum::renderMainView();
+                    Forum::newTopic();
                     break;
 
                 case 'user':

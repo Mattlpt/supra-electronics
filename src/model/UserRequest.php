@@ -9,8 +9,33 @@ function fetchUser(String $string) {
         'username'=>$string
     ]);
     $result = $query->fetchAll();
-    return $result[0];
+    if(sizeof($result) == 0) {
+        return null;
+    }
+    else {
+        return $result[0];
+    }
 }
+
+function  addUser($values) {
+        $db = $GLOBALS['connection']->getDb();
+        $query = $db->prepare("INSERT INTO user (username_user, password_user, lastname_user, firstname_user, email_user) VALUES (:username,:password,:nom,:prenom,:mail)");
+        $query->execute([
+            "username"=>$values[0],
+            "prenom"=>$values[1],
+            "nom"=>$values[2],
+            "mail"=>$values[3],
+            "password"=>password_hash($values[4], PASSWORD_DEFAULT)
+        ]);
+    }
+
+    function removeUser($id) {
+        $db = $GLOBALS['connection']->getDb();
+        $query = $db->prepare("DELETE FROM user WHERE id_user = :id");
+        $query->execute([
+            'id'=>$id
+        ]);
+    }
 
 function  getAllUser(): array
     {
@@ -56,23 +81,11 @@ function  getUsersByField(string $field, string $value): array
         return $array;
     }
 
-function  getOneOrNullUserById(int $id): ?User
-    {
+function  fetchUserId(int $id) {
         $db = $GLOBALS['connection']->getDb();
         $query = $db->prepare("SELECT * FROM user WHERE id_user = :id");
         $query->execute(['id'=>$id]);
         $results = $query->fetchAll();
-
-        foreach($results as $userline)
-        {
-            $user = new User();
-            $user->setId($userline['id_user']);
-            $user->setUsername($userline['username_user']);
-            $user->setFirstname($userline['firstname_user']);
-            $user->setLastname($userline['lastname_user']);
-            $user->setMail($userline['email_user']);
-            return $user;
-        }
-        return null;
+        return $results[0];
     }
 ?>

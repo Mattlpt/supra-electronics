@@ -74,10 +74,10 @@ class UserController
 
                     if(!empty($_GET))
                     {
-                        $user = getOneOrNullUserById($_GET['id']);
+                        $user = fetchUserId($_GET['id']);
                         if($user !== null)
                         {
-                            $user->delete();
+                            removeUser($_GET['id']);
                         }
                     }
                     header("Location: /user");
@@ -90,11 +90,6 @@ class UserController
             //la j'appelle le modèle pour selectioner tous les users
             $userListe = getAllUser();
             $vars['usersListe'] = $userListe;
-
-            //là je selectionne un seul User à partir du modèle
-            $moi = getOneOrNullUserById(1);
-            //là je selection un ou plusieurs user dont le fistname est julein
-            $julien = getUsersByField('firstname_user','julien');
 
 
             renderView('user/user.view.php',$vars, 'Utilisateurs');
