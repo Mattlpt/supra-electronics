@@ -56,23 +56,11 @@ function  getUsersByField(string $field, string $value): array
         return $array;
     }
 
-function  getOneOrNullUserById(int $id): ?User
-    {
+function  fetchUserId(int $id) {
         $db = $GLOBALS['connection']->getDb();
         $query = $db->prepare("SELECT * FROM user WHERE id_user = :id");
         $query->execute(['id'=>$id]);
         $results = $query->fetchAll();
-
-        foreach($results as $userline)
-        {
-            $user = new User();
-            $user->setId($userline['id_user']);
-            $user->setUsername($userline['username_user']);
-            $user->setFirstname($userline['firstname_user']);
-            $user->setLastname($userline['lastname_user']);
-            $user->setMail($userline['email_user']);
-            return $user;
-        }
-        return null;
+        return $results[0];
     }
 ?>
