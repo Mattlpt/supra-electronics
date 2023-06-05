@@ -46,7 +46,7 @@ class Dispatcher
 
                 case 'stats':
                     include('controller/analyse/Stats.php');
-                    Stats::renderMainView();
+                    Stats::test();
                     break;
 
                 case 'analytics':
