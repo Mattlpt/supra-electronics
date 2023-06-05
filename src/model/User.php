@@ -125,7 +125,7 @@ class User
             ");
             $result = $query->execute([
                 'username' => $this->username,
-                'password' => $this->password,
+                'password' => password_hash($this->password, PASSWORD_DEFAULT),
                 'firstname' => $this->firstname,
                 'lastname'=> $this->lastname,
                 'email' => $this->mail,
@@ -142,7 +142,7 @@ class User
 >>>>>>> cd04583... login
             $result = $query->execute([
                 'username'=>$this->username,
-                'password'=>$this->password,
+                'password'=>password_hash($this->password, PASSWORD_DEFAULT),
                 'nom'=>$this->lastname,
                 'prenom'=>$this->firstname,
                 'password'=>$this->password,

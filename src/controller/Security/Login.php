@@ -25,7 +25,7 @@ class Login{
                 $check = true;
                 if($check) {
                     $user = fetchUser($_POST['username']);
-                    if($user['password_user'] == $_POST['password']) {
+                    if(password_verify($_POST['password'], $user['password_user'])) {
                         $_SESSION['logged_user'] = $user;
                         header('Location: /home');
                         switch($_SESSION['logged_user']['status_user']) {
