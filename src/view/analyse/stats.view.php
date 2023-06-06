@@ -15,6 +15,45 @@
             </div>
             <div class="grille-4-item">
                 <div class="carte">
+                    <h4>ECG </h4>
+                    <h6>Machine, Sale 1</h6>
+                    <div class="container">
+                        <temperature> <span id="randomNumber"></span> ° C</temperature>
+                    </div>
+                </div>
+            </div>
+            <div class="grille-4-item">
+                <div class="carte">
+                    <h4>ECG </h4>
+                    <h6>Machine, Sale 2</h6>
+                    <div class="container">
+                        <temperature><?php echo $temperature = $vars['temperature'][2] ?> ° C</temperature>
+                    </div>
+                </div>
+            </div>
+            <div class="grille-4-item">
+                <div class="carte">
+                    <h4>Température</h4>
+                    <h6>Machine, Sale 3</h6>
+                    <div class="container">
+                        <temperature><?php echo $temperature = $vars['temperature'][3] ?> ° C</temperature>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grille-4">
+            <div class="grille-4-item">
+                <div class="carte">
+                    <h4>Température</h4>
+                    <h6>Exterieur</h6>
+                    <div class="container">
+                        <temperature><?php echo $temperature = $vars['temperature'][0] ?> ° C</temperature>
+                    </div>
+                </div>
+            </div>
+            <div class="grille-4-item">
+                <div class="carte">
                     <h4>Température</h4>
                     <h6>Machine, Sale 1</h6>
                     <div class="container">

@@ -60,4 +60,10 @@ function timeToString($message) {
     $string = "$exptime[0]:$exptime[1]";
     return $string;
 }
+
+function removeForum($id) {
+    $db = $GLOBALS['connection']->getDb();
+    $query = $db->prepare("SELECT FROM forum where id_forum = $id");
+    $query->execute();
+}
 ?>

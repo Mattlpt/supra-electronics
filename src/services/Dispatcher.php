@@ -108,8 +108,9 @@ class Dispatcher
 
 
                 case 'home' :
-                    include("controller/home.index.php");
-                    Home::renderMainView();
+                    echo "la";
+                    include('controller/dashboard/Dashboard.php');
+                    Dashboard::renderMainView();
                     break;
 
                 case 'connexion' :
@@ -120,6 +121,11 @@ class Dispatcher
                 case 'readCGU':
                     include('controller/public/CGU.php');
                     CGU::renderAcceptenceView();
+                    break;
+
+                case 'quiz' :
+
+                    include('view/contact/quiz.php');
                     break;
 
                 default:
