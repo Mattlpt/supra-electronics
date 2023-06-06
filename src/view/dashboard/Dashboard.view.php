@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 
     <div class="content-body">
-        <p>Nom:_____</p>
-        <p>Prenome:_____</p>
+        <p>Nom:<?php echo(" ".$_SESSION['logged_user']['lastname_user']) ?></p>
+        <p>Prenom:<?php echo(" ".$_SESSION['logged_user']['firstname_user']) ?></p>
 
         <div class="grille-4">
             <div class="grille-4-item">
