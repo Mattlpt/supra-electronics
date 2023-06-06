@@ -48,7 +48,7 @@ function fetchAllMessages() {
 
 function fetchMessagesForum($id) {
     $db = $GLOBALS['connection']->getDb();
-    $query = $db->prepare("SELECT * from message WHERE forum_message = $id");
+    $query = $db->prepare("SELECT * from message WHERE forum_message = $id ORDER BY id_message DESC");
     $query->execute();
     $results = $query->fetchAll();
     return $results;
