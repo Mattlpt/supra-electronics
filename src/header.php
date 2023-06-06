@@ -8,7 +8,7 @@ $db_host = 'mysql';
 try {
     #$db = new PDO("mysql:host=". $db_host, $db_user, $db_pass);
     #$db->exec($db_name);
-    $db = new PDO("mysql:host=". $db_host.";port=3307" .";dbname=".$db_name, $db_user, $db_pass);
+    $db = new PDO("mysql:host=". $db_host.";port=3307" .";dbname=", $db_user, $db_pass);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 

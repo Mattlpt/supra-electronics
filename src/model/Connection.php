@@ -31,4 +31,5 @@ class Connection {
     {
         return $this->db;
     }
+
 }

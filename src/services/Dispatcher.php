@@ -6,15 +6,16 @@ use Analytics;
 use controller\contact\Forum;
 use controller\contact\ForumTopic;
 use controller\home\Home;
+use controller\public\CGU;
 use controller\security\Login;
 use controller\security\Register;
 use controller\public\Accueil;
 use controller\user\UserController;
 use Dashboard;
 use Messagerie;
-use Stats;
-use controller\config\Configu; 
 
+use controller\analyse\Stats;
+use controller\config\Configu;
 
 class Dispatcher
 {
@@ -97,6 +98,7 @@ class Dispatcher
 
                 case'CGU':
                     include('controller/public/CGU.php');
+                    CGU::renderMainView();
                     break;
                 
                 case 'dashboard':
@@ -113,6 +115,11 @@ class Dispatcher
                 case 'connexion' :
                     include('controller/Security/Login.php');
                     Login::loginUser();
+                    break;
+
+                case 'readCGU':
+                    include('controller/public/CGU.php');
+                    CGU::renderAcceptenceView();
                     break;
 
                 default:
