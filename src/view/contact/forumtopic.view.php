@@ -13,8 +13,10 @@
         <div class="discussion">
             <?php
             $messages = fetchMessagesForum($id);
-            foreach($messages as $message) { ?>
+            foreach($messages as $message) { 
+                $author = fetchUserId($message['author_message']);?>
                 <div class="bulle">
+                    <p><?php echo($author['username_user']." : ")?></p>
                     <p><?php echo($message['content_message'])?></p><br>
                     <div class="heure"><?php echo(timeToString($message)) ?></div><br>
 
