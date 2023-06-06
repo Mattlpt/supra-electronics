@@ -46,7 +46,7 @@ class UserController
                 case 'update':
                     if(isset($_GET['id']) && $_GET['id']>0)
                     {
-                        $user = getOneOrNullUserById($_GET['id']);
+                        $user = fetchUserId($_GET['id']);
                         if(empty($_POST))
                         {
                             //affichage du formulaire pré-rempli
