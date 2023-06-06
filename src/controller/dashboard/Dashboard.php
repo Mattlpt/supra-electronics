@@ -8,6 +8,7 @@ class Dashboard{
 
     public static function renderMainView():void
     {
+        echo 'la';
         renderView("dashboard/Dashboard.view.php", NULL, "dashboard");
     }
 }

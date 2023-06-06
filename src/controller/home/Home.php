@@ -9,6 +9,6 @@ class Home{
 
     public static function renderMainView():void
     {
-        renderView('home/index.view.php');
+        renderView('home/dashboard.view.php');
     }
 }

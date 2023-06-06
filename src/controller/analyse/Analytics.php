@@ -8,7 +8,6 @@ class Analytics{
 
     public static function renderMainView():void
     {
-
         renderView("analyse/analytics.view.php", $vars, "Analytics");
     }
 }
