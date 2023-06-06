@@ -108,8 +108,9 @@ class Dispatcher
 
 
                 case 'home' :
-                    include("controller/home.index.php");
-                    Home::renderMainView();
+                    echo "la";
+                    include('controller/dashboard/Dashboard.php');
+                    Dashboard::renderMainView();
                     break;
 
                 case 'connexion' :

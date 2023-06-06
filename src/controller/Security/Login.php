@@ -27,18 +27,8 @@ class Login{
                     $user = fetchUser($_POST['username']);
                     if(password_verify($_POST['password'], $user['password_user'])) {
                         $_SESSION['logged_user'] = $user;
-                        header('Location: /home');
-                        switch($_SESSION['logged_user']['status_user']) {
-                            case 0:
-                                $_SESSION['logged_user']['status_user'] = "utilisateur";
-                                break;
-                            case 1:
-                                $_SESSION['logged_user']['status_user'] = "gestionnaire";
-                                break;
-                            case 2:
-                                $_SESSION['logged_user']['status_user'] = "administrateur";
-                                break;
-                        }
+                        header('Location: /dashboard');
+
                     }
                 }
             }
