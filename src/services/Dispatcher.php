@@ -123,6 +123,11 @@ class Dispatcher
                     CGU::renderAcceptenceView();
                     break;
 
+                case 'quiz' :
+
+                    include('view/contact/quiz.php');
+                    break;
+
                 default:
                     include('controller/home/index.php');
             }

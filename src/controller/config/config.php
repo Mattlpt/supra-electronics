@@ -51,18 +51,6 @@ if($page !== null && $page !== '')
 (49, 18, 'test', '1,34,18', NULL, 7),
 (50, 18, 'allo', '1,34,25', NULL, 7);");
 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;");
-
-        $conn->query("CREATE TABLE `forum` (
-  `id_forum` int NOT NULL,
-  `topic_forum` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `author_forum` int NOT NULL,
-  `question_forum` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;");
-
-        $conn->query("INSERT INTO `forum` (`id_forum`, `topic_forum`, `author_forum`, `question_forum`) VALUES
-(1, 'matthieu beau ?', 11, 'réponse evidente');");
-
         $conn->query("CREATE TABLE `user` (
   `id_user` int NOT NULL,
   `username_user` varchar(15) NOT NULL,
