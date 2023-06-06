@@ -48,8 +48,8 @@
     }
 
     .bulle{
-        width: 100%;
-        height: 20%;
+        width: 500px;
+        height: auto;
         margin-bottom: 20px;
         margin-top: 20px;
         padding: 10px 10px;
@@ -95,8 +95,20 @@
         color: var(--text-hard-color);
     }
 
-    input:focus{
-        box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    input:focus {
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .button{
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--white);
+        height: 30px;
+        border: none;
+        background: var(--primary-color);
+        border-radius: 6px;
+        cursor: pointer;
+    }
 
 </style>
 
