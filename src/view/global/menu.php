@@ -18,7 +18,7 @@
 
             <li class="search-box">
                 <i class='bx bx-search icon'></i>
-                <input type="text" placeholder="Recherche...">
+                <input type="text" id="searchInput" placeholder="Recherche...">
             </li>
 
             <li class="title"> Menu </li>
@@ -56,16 +56,11 @@
 
                 <li class="title"> Contact </li>
 
-                <li class="nav-link">
-                    <a href="#" onclick="window.location.href = '/messagerie'">
-                        <i class='bx bx-message icon'></i>
-                        <span class="text nav-text">Messagerie</span>
-                    </a>
-                </li>
+
 
                 <li class="nav-link">
                     <a href="#" onclick="window.location.href = '/forum'">
-                        <i class='bx bx-question-mark icon'></i>
+                        <i class='bx bx-message icon'></i>
                         <span class="text nav-text">FAQ</span>
                     </a>
                 </li>
@@ -106,3 +101,25 @@
     </div>
 
 </nav>
+
+
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const list = document.getElementById('list').getElementsByTagName('li');
+
+    searchInput.addEventListener('input', function() {
+        const searchValue = this.value.toLowerCase();
+
+        for (let i = 0; i < list.length; i++) {
+            const item = list[i];
+            const text = item.textContent.toLowerCase();
+
+            if (text.includes(searchValue)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    });
+</script>
